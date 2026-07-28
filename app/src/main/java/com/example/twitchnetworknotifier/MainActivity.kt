@@ -28,7 +28,10 @@ class MainActivity : AppCompatActivity() {
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            // Bottom inset is owned by the BottomNavigationView (it applies its own
+            // bottom padding for edge-to-edge). Applying it here too would double-count
+            // the gesture-nav area and inflate the bar's height.
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
             insets
         }
         setSupportActionBar(binding.toolbar)

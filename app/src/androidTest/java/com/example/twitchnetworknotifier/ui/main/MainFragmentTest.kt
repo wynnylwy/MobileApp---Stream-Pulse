@@ -34,7 +34,7 @@ class MainFragmentTest {
 
     @Test
     fun togglingOffShowsConfirmationDialog_noKeepsItOn() {
-        launchFragmentInContainer<MainFragment>(themeResId = R.style.Theme_TwitchNetworkNotifier)
+        launchFragmentInContainer<MainFragment>(themeResId = R.style.Theme_StreamPulse)
 
         onView(withId(R.id.switch_monitoring)).perform(click())
         onView(withId(R.id.switch_monitoring)).check(matches(isChecked()))
@@ -48,7 +48,7 @@ class MainFragmentTest {
 
     @Test
     fun togglingOffShowsConfirmationDialog_yesTurnsItOff() {
-        launchFragmentInContainer<MainFragment>(themeResId = R.style.Theme_TwitchNetworkNotifier)
+        launchFragmentInContainer<MainFragment>(themeResId = R.style.Theme_StreamPulse)
 
         onView(withId(R.id.switch_monitoring)).perform(click())
         onView(withId(R.id.switch_monitoring)).perform(click())
@@ -67,7 +67,7 @@ class MainFragmentTest {
             historyStore.addEvent(StatusEvent(2_000L, StreamStatus.LIVE, StreamStatus.OFFLINE))
         }
 
-        launchFragmentInContainer<MainFragment>(themeResId = R.style.Theme_TwitchNetworkNotifier)
+        launchFragmentInContainer<MainFragment>(themeResId = R.style.Theme_StreamPulse)
 
         onView(withId(R.id.recycler_history)).check(matches(hasChildCount(2)))
     }

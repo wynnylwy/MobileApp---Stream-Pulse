@@ -12,8 +12,8 @@ android {
         applicationId = "com.example.twitchnetworknotifier"
         minSdk = 24
         targetSdk = 36
-        versionCode = 10006
-        versionName = "1.0.6"
+        versionCode = 10101
+        versionName = "1.1.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
