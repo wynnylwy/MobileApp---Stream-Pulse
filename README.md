@@ -1,4 +1,4 @@
-# Twitch Network Notifier (TNN)
+# Stream Pulse
 
 A lightweight Android app that monitors a Twitch channel's live status in the background and notifies you the moment it goes online, so you never miss a stream.
 
