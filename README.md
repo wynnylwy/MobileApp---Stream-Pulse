@@ -1,4 +1,4 @@
-# Stream Pulse
+# Stream Pulse (SP)
 
 A lightweight Android app that monitors a Twitch channel's live status in the background and notifies you the moment it goes online, so you never miss a stream.
 
@@ -11,7 +11,7 @@ A lightweight Android app that monitors a Twitch channel's live status in the ba
 
 ## How It Works
 
-TNN authenticates with Twitch's API using your app's Client ID and Client Secret, then periodically checks whether the configured channel is currently streaming. When a status change (offline → live) is detected, the app fires a local notification.
+SP authenticates with Twitch's API using your app's Client ID and Client Secret, then periodically checks whether the configured channel is currently streaming. When a status change (offline → live) is detected, the app fires a local notification.
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ To connect to Twitch's API, you'll need your own app credentials:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/twitch-network-notifier.git
+   git clone https://github.com/wynnylwy/twitch-network-notifier.git
    ```
 2. Open the project in Android Studio.
 3. Add your Twitch credentials to the app config (e.g. `local.properties` or `secrets.xml`):
